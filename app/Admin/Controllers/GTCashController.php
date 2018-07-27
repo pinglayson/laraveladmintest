@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Admin\Controllers\GTcash;
+namespace App\Admin\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\GTCash;
 use Encore\Admin\Facades\Admin;
 use Encore\Admin\Layout\Content;
 
-class GTcashSendController extends Controller
+class GTCashController extends Controller
 {
     public function index()
     {
@@ -16,5 +17,10 @@ class GTcashSendController extends Controller
 
             $content->body(view('gtcash/gt-cash-send'));
         });
+    }
+
+    public function sendGTCashPayment()
+    {
+        return GTCash::sendGTCashPayment();
     }
 }

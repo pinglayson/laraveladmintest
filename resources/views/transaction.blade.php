@@ -20,7 +20,7 @@
 function sendConfirm(id){
     $.ajax({
         method: "POST",
-        url: "/admin/confirm-transations/"+id
+        url: "/admin/transactions/confirm-transactions/"+id
     })
     .done(function( msg ) {
         if(msg.message == 'success') {
@@ -34,7 +34,7 @@ function sendConfirm(id){
 $( document ).ready(function() {
     $('#example').DataTable({
         ajax: {
-            url: '/admin/get-transations',
+            url: '/admin/transactions/get-transactions',
         },
         columns: [
             { data: 'amount'},

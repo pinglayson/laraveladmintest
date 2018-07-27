@@ -81,7 +81,7 @@
           <div class="col-sm-8">
             <div class="input-group">
               <input name="smscode" type="text" value="" class="gt-input form-control slug">
-              <span class="input-group-btn">
+              <span class="input-group-btn" style="float:left">
                 <button class="btn btn-default" type="button">Click to get sms code</button>
               </span>
             </div>
@@ -98,11 +98,11 @@
 <script type="text/javascript">
 $(document).ready(function(){
   $('#gt-cash-from').on('submit',function(e) {
-    e.preventDefault(); //=== To Avoid Page Refresh and Fire the Event "Click"===
+    e.preventDefault();
     if ( $(this).parsley().isValid() ) {
       $.ajax({
         method: "POST",
-        url: "/admin/confirm-transations/",
+        url: "/admin/gt-cash/send-gt-cash",
         data:$(this).serialize()
       })
       .done(function( msg ) {

@@ -159,5 +159,5 @@ return [
 
     ],
     'api_url' => 'http://sandbox.gtdollar.com/api/dummy/',
-    'apu_url_mock' => 'https://demo0456207.mockable.io/',
+    'api_url_mock' => 'https://demo0456207.mockable.io/',
 ];
